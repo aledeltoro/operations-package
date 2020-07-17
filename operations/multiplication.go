@@ -9,6 +9,7 @@ var (
 	errInvalidType = errors.New("error: invalid variable type")
 )
 
+// ValidateNumberSlice checks if the given arguments are integer values
 func ValidateNumberSlice(numbers []string) ([]int, error) {
 
 	var validatedNumbers []int
@@ -28,7 +29,8 @@ func ValidateNumberSlice(numbers []string) ([]int, error) {
 
 }
 
-func MultiplyNumbers(numbers []int) int {
+// MultiplyNumbers multiplies the slice of validated numbers
+func MultiplyNumbers(numbers []int) (int, error) {
 
 	var result int = 1
 
@@ -36,6 +38,6 @@ func MultiplyNumbers(numbers []int) int {
 		result = result * number
 	}
 
-	return result
+	return result, nil
 
 }

@@ -11,9 +11,9 @@ import (
 
 func main() {
 
-	numbers := os.Args[1:]
+	arguments := os.Args[1:]
 
-	validatedNumbers, err := multiply.ValidateNumberSlice(numbers)
+	validatedNumbers, err := multiply.ValidateNumberSlice(arguments)
 	if err != nil {
 		log.Fatal(err)
 	}
