@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"log"
+	"os"
 
 	multiply "exam/operations"
-	
 )
 
 func main() {
@@ -18,10 +17,11 @@ func main() {
 		log.Fatal(err)
 	}
 
-	result := multiply.MultiplyNumbers(validatedNumbers)
+	result, err := multiply.MultiplyNumbers(validatedNumbers)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	fmt.Println(result)
 
 }
-
-
