@@ -3,6 +3,7 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
+  demands: Limit -equals DisAbleParallel 
 
 steps:
 - task: GoTool@0
